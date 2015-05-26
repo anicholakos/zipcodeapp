@@ -16,6 +16,7 @@ $(document).ready(function() {
                 result += "<li>Longitude: " + longitude + "</li>";
                 result += "<li>City: " + city + "</li>";
                 result += "<li>State: " + state + "</li>";
+                console.log(result);
                 $("#searchResults").html(result);
                 $('#searchResults').listview('refresh');
             }
