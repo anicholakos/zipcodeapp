@@ -1,6 +1,6 @@
 {
     "version":"1.0",
-    "name": "US Zipcodes",
+    "name": "Zipcodes",
     "description": "This app gives you information on zipcodes of the US!",
     "launch_path": "/index.html",
     "icons": {
