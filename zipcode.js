@@ -8,14 +8,11 @@ $(document).ready(function() {
             if (xhr.readyState == 4) {
                 var result = "";
                 var resp = JSON.parse(xhr.response);
-                var city = resp.places[0]['place name'];
-                var state = resp.places[0]['state'];
-                var longitude = resp.places[0]['longitude'];
-                var latitude = resp.places[0]['latitude'];
-                result += "<li>Latitude: " + latitude + "</li>";
-                result += "<li>Longitude: " + longitude + "</li>";
-                result += "<li>City: " + city + "</li>";
-                result += "<li>State: " + state + "</li>";
+                var location_obj = resp.places[0];
+                result += "<li>Latitude: " + location_obj['latitude'] + "</li>";
+                result += "<li>Longitude: " + location_obj['longitude'] + "</li>";
+                result += "<li>City: " + location_obj['place name'] + "</li>";
+                result += "<li>State: " + location_obj['state'] + "</li>";
                 console.log(result);
                 $("#searchResults").html(result);
                 $('#searchResults').listview('refresh');
